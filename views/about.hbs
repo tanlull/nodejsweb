@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<p>ทันเองจ่ะ hello1</p>
+<ul>
+    {{#each products}}
+        {{category}}
+        {{#each drinks}}
+    <li>{{id}} : {{name}}</li>
+    {{/each}}
+    {{/each}}
+</ul>
+
+<p>Guest book</p>
+<table border=1>
+<th>Title</th><th>Message</th><th>Author</th>
+ 
+    {{#each items}}
+    <tr> <td>{{title}}</td> <td> {{message}}</td><td> {{author}}</td></tr>
+    {{/each}}
+</table>
+
+
+<p>News Part</p>
+<table border=1>
+<th>Title</th><th>Author</th>
+ 
+    {{#each news}}
+    <tr> <td>{{title}}</td> <td> {{author}}</td></tr>
+    {{/each}}
+</table>

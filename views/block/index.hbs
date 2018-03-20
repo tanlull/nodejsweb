@@ -1,0 +1,30 @@
+<div class="col-lg-6">
+<h1 class="mt-3">{{header}}</h1>
+<h3>{{title}}</h3>
+
+
+<br>
+<br>
+<h3>{{header}}</h3>
+<a href="/block/create" class="btn btn-success">Write Blog</a>  total : {{count}} records.
+<p></p>
+{{#each blog}}
+<div class="card">
+  <div class="card-header">
+    {{id}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/block/edit/{{id}}" class="btn btn-danger">Edit</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/block/delete/{{id}}" class="btn btn-primary">Delete</a>
+  </div>
+  
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{message}}</p>
+      <footer class="blockquote-footer">{{title}} <cite title="Source Title"></cite></footer>
+    </blockquote>
+  </div>
+</div>
+<p></p>
+{{else}}
+<p>ยังไม่มีข้อมูลการเขียน Blog </p>
+{{/each}}
+</div>

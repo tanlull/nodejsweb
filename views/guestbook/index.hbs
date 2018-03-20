@@ -1,0 +1,26 @@
+<div class="col-lg-6">
+<h1 class="mt-3">{{header}}</h1>
+<h3>{{title}}</h3>
+<h3>{{header}}</h3>
+
+<br>
+
+<a href="/guestbook/create" class="btn btn-primary">Add Guestbook</a>
+
+{{#each items}}
+<div class="card">
+  <div class="card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{message}}</p>
+      <footer class="blockquote-footer">{{guest}} <cite title="Source Title"></cite></footer>
+    </blockquote>
+  </div>
+</div>
+<p></p>
+{{else}}
+<p>ยังไม่มีข้อมูลการเยี่ยม</p>
+{{/each}}
+</div>
