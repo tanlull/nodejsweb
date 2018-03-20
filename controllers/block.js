@@ -1,17 +1,10 @@
 const items = require('../models/Items')
-
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'nodejs'
-});
+const connection = require('../config')
 
 exports.index = (req,res) => {
     let header = req.param.header
     connection.query('SELECT * from block', function (error, results, fields) {
-      if (error) throw error;
+      if (error) throw error; 
       connection.query('SELECT count(*) as count from block', function (error, count, fields) {
         if (error) throw error;
       res.render('block/index',{blog:results,header:header,count:count[0].count});
